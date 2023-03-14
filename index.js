@@ -38,10 +38,10 @@ app.use(bodyParser.urlencoded({'extended':'true'}));            // parse applica
 app.use(bodyParser.json());                                     // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 
-app.use(express.static(path.join(__dirname, "./travel-client/")));
+app.use(express.static(path.join(__dirname, "./travel-client/build")));
 app.get("*", function (_, res) {
   res.sendFile(
-    path.join(__dirname, "./travel-client/public/index.html"),
+    path.join(__dirname, "./travel-client/build/public/index.html"),
     function (err) {
       res.status(500).send(err);
     }
