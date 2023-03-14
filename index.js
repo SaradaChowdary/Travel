@@ -8,6 +8,7 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser'); // pull information from HTML POST (express4)
 const cors = require('cors');
+const path = require("path");
 
 // Setting cors and mongoose warning
 app.use(cors());
