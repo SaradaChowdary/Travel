@@ -41,7 +41,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.use(express.static(path.join(__dirname, "./travel-client/build")));
 app.get("*", function (_, res) {
   res.sendFile(
-    path.join(__dirname, "./travel-client/build/public/index.html"),
+    path.join(__dirname, "./travel-client/build/index.html"),
     function (err) {
       res.status(500).send(err);
     }
